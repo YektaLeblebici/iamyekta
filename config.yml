@@ -1,0 +1,50 @@
+baseURL: "https://iamyekta.com/"
+languageCode: "en-us"
+title: "Yekta Leblebici"
+theme: "iamyekta-stellar"
+description : "Yekta Leblebici, all about me."
+defaultLayout: "post"
+defaultContentLanguage: "en"
+enableRobotsTXT: true
+enableEmoji: true
+paginate: 10
+paginatePath: "page"
+publishDir: "public"
+pygmentsCodeFencesGuessSyntax: true
+pygmentsStyle: "github"
+rssLimit: 15
+smartypants: false
+
+googleAnalytics: "UA-46870823-2" 
+disqusShortname: "iamyekta" 
+
+permalinks:
+  post: /post/:year/:month/:title/
+
+menu: 
+  nav:
+    - name: "Hello"
+      url: "/"
+    - name: "Posts"
+      url: "/post/"
+    - name: "Resume"
+      url: "/yekta_cv.pdf"
+    - name: "Say Hi!"
+      url: "mailto:hi@iamyekta.com"
+
+
+  
+
+# Change it to false when we need more performance.
+disableFastRender: true
+
+# Parameters
+params:
+  name: "Yekta Leblebici"
+  shortBio: "I'm a self-taught software developer and system administrator from <b>Turkey</b>, currently working as a <b>DevOps Engineer</b>. I am passionate about anything and everything in the software world, yet I mostly specialize in <b>Linux</b>, <b>DevOps</b>, <b>Python</b> and <b>Web</b>. I love working in the software industry, and I'm a firm believer that \"software is eating the world\".</p><p>When I'm not reading HN, Reddit or a book, I mostly spend my evenings playing all kinds of games or watching sci-fi, fantasy or animated movies.</p>"
+  githubLink: "https://github.com/YektaLeblebici"
+  linkedinLink: "https://www.linkedin.com/in/yekta-leblebici"
+  profileFile: "profile.jpg"
+  mailAddr: "hi@iamyekta.com"
+  githubRepositoryOfWebsite: "https://github.com/YektaLeblebici/iamyekta"
+

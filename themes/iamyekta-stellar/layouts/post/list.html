@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        {{ partial "head.html" . }}
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+
+					</header>
+
+                    <nav id="nav" class="">
+                        {{ partial "nav.html" . }}
+                    </nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+{{ range .Pages.GroupByPublishDate "2006" }}
+<h1>{{ .Key }}</h1>
+<ul class="alt">
+    {{ range .Pages }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+								<!-- <h1>2018</h1> -->
+                                <ul class="alt">
+                                {{ range .Pages.ByPublishDate.Reverse }}
+                                {{ end }}
+                                </ul>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        {{ partial "footer.html" . }}
+					</footer>
+
+			</div>
+	</body>
+</html>

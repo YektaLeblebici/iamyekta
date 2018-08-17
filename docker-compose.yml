@@ -1,0 +1,12 @@
+version: "3"
+services:
+  nginx:
+    build:
+      context: .
+    image: yekta/iamyekta-nginx:latest
+      
+    hostname: "nginx"
+    domainname: "iamyekta.com"
+    ports:
+      - "80:80"
+    restart: always

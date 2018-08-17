@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        {{ partial "head.html" . }}
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+					</header>
+                <nav id="nav">
+                    {{ partial "nav.html" . }}
+                </nav>
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+                                <div class="spotlight">
+									<div class="content">
+										<header class="major">
+                                            <h1>404 Page not found</h1>
+										</header>
+                                        <p>It seems the link you have followed has been moved, deleted or never existed at all.<br>
+                                        Do not despair! This is a small website. If I were you, I would just go and check the list of <a href="{{ .Site.BaseURL }}post">all posts</a> I have ever published.</p>
+                                        <p>If you think that this is an error, please <a href="mailto:{{ .Site.Params.mailAddr }}">shoot me an email</a>. Thanks!</p>
+									</div>
+								</div>
+							</section>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+                        {{ partial "footer.html" . }}
+					</footer>
+
+			</div>
+	</body>
+</html>
