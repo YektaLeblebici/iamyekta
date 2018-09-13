@@ -1,8 +1,8 @@
 
-build: clean hugo-build docker-up
+build: clean clean-docker hugo-build docker-up
 	@echo ">> Built Hugo and started Docker container(s)."
 
-build-local: clean hugo-build-local docker-up
+build-local: clean clean-docker hugo-build-local docker-up
 
 hugo-build-local: clean
 	@echo ">> Building Hugo pages for local testing. Reverting baseURL."
@@ -17,8 +17,11 @@ docker-up:
 	@docker-compose up --build -d
 
 clean:
-	@echo ">> Removing public directory and container(s)."
+	@echo ">> Removing public directory."
 	@rm -rf public/
+
+clean-docker:
+	@echo ">> Removing container(s)."
 	@docker-compose down
 
-.PHONY: build build-local hugo-build hugo-build-local docker-up clean
+.PHONY: build build-local hugo-build hugo-build-local docker-up clean clean-docker
