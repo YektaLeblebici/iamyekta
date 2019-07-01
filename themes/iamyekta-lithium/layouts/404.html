@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+<main class="content" role="main">
+
+  <article class="article">
+    <h1 class="article-title">404 Page not found</h1>
+
+    <div class="article-content">
+        <p>It seems like the link you have followed has been moved, deleted or never existed at all.</p>
+        <p>Do not despair! This is a small website. If I were you, I would just go and check the list of <a href="{{ .Site.BaseURL }}post">all posts</a> I have ever published.</p>
+        <p>If you think that this is an error, please <a href="mailto:{{ .Site.Params.mailAddr }}">shoot me an email</a>. Thanks!</p>
+    </div>
+  </article>
+</main>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+<main class="content" role="main">
+
+  <article class="article">
+    <h1 class="article-title title-greeting">Hi! I'm {{ .Site.Params.name }}</h1>
+    <div class="article-content">
+        {{ .Site.Params.shortBio | safeHTML }}
+    </div>
+    <ul class="icons">
+        <li><a href="{{ .Site.BaseURL}}post" class="icon alt fa-pencil"><span class="label">Blog</span></a></li>
+        <li><a href="{{ .Site.Params.githubLink }}" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="{{ .Site.Params.linkedinLink }}" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+    </ul>
+  </article>
+</main>
+
+{{ partial "footer.html" . }}

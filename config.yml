@@ -1,7 +1,7 @@
 baseURL: "https://iamyekta.com/"
 languageCode: "en-us"
 title: "Yekta Leblebici"
-theme: "iamyekta-stellar"
+theme: "iamyekta-lithium"
 description : "Yekta Leblebici, all about me."
 defaultLayout: "post"
 defaultContentLanguage: "en"
@@ -20,9 +20,10 @@ disqusShortname: "iamyekta"
 
 permalinks:
   post: /post/:year/:month/:title/
+  page: /:title/
 
 menu: 
-  nav:
+  main:
     - name: "Hello"
       url: "/"
     - name: "Posts"
@@ -32,19 +33,26 @@ menu:
     - name: "Say Hi!"
       url: "mailto:hi@iamyekta.com"
 
-
-  
-
 # Change it to false when we need more performance.
 disableFastRender: true
 
 # Parameters
 params:
   name: "Yekta Leblebici"
-  shortBio: "I'm a self-taught software developer and system administrator from <b>Turkey</b>, currently working as a <b>DevOps Engineer</b>. I am passionate about anything and everything in the software world, yet I mostly specialize in <b>Linux</b>, <b>DevOps</b>, <b>Python</b> and <b>Web</b>. I love working in the software industry, and I'm a firm believer that \"software is eating the world\".</p><p>When I'm not reading HN, Reddit or a book, I mostly spend my evenings playing all kinds of games or watching sci-fi, fantasy or animated movies.</p>"
+  shortBio: "I'm a self-taught software developer and infrastructure guy, currently living in <b>Berlin</b> and working as a <b>DevOps Engineer</b>. I am passionate about anything and everything in the software world, nowadays I mostly do <b>Linux</b>, <b>DevOps & Infrastructure</b>, <b>Python</b>, <b>Go</b> and <b>Web</b> stuff.</p>
+  
+  <p>In my evenings, I mostly either read HN, Reddit or a book, or play all kinds of games and watch sci-fi, fantasy and animated movies.</p>"
   githubLink: "https://github.com/YektaLeblebici"
   linkedinLink: "https://www.linkedin.com/in/yekta-leblebici"
-  profileFile: "profile.jpg"
   mailAddr: "hi@iamyekta.com"
   githubRepositoryOfWebsite: "https://github.com/YektaLeblebici/iamyekta"
+
+  logo:
+    url:  "profile.jpg"
+    width: 50
+    height: 50
+    alt: "Logo"
+
+  icon:
+    url: "favicon-32x32.png"
 

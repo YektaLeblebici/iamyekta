@@ -4,7 +4,6 @@ services:
     build:
       context: .
     image: yekta/iamyekta-nginx:latest
-      
     hostname: "nginx"
     domainname: "iamyekta.com"
     ports:

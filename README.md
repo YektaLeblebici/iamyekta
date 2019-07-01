@@ -4,7 +4,7 @@ This repository contains the source code, posts & assets and custom theme of my 
 
 * Static website generated with Hugo.
 * Posts are written in Markdown.
-* Hugo theme is created from "Stellar" CSS template by HTML5UP, with some customizations.
+* Hugo theme is `hugo-lithium-theme` with some customizations.
 * Deployed with Docker Compose and a tiny Makefile.
 
 ## Dependencies
