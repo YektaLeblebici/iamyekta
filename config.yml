@@ -39,11 +39,12 @@ disableFastRender: true
 # Parameters
 params:
   name: "Yekta Leblebici"
-  shortBio: "I'm a self-taught software developer and infrastructure guy, currently living in <b>Berlin</b> and working as a <b>DevOps Engineer</b>. I am passionate about anything and everything in the software world, nowadays I mostly do <b>Linux</b>, <b>DevOps & Infrastructure</b>, <b>Python</b>, <b>Go</b> and <b>Web</b> stuff.</p>
+  shortBio: "I'm a self-taught software developer and infrastructure guy, currently living in <b>Berlin</b> and working as a <b>DevOps Engineer</b>. I am passionate about almost anything and everything in the software world, nowadays I mostly do <b>Linux</b>, <b>DevOps & Infrastructure</b>, <b>Python</b>, <b>Go</b> and <b>Web</b> stuff.</p>
   
   <p>In my evenings, I mostly either read HN, Reddit or a book, or play all kinds of games and watch sci-fi, fantasy and animated movies.</p>"
   githubLink: "https://github.com/YektaLeblebici"
   linkedinLink: "https://www.linkedin.com/in/yekta-leblebici"
+  keybaseLink: "https://keybase.io/yekta_l"
   mailAddr: "hi@iamyekta.com"
   githubRepositoryOfWebsite: "https://github.com/YektaLeblebici/iamyekta"
 

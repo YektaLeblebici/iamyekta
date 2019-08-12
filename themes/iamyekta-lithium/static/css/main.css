@@ -1,5 +1,3 @@
-@import url(font-awesome.min.css);
-
 html,
 body {
   margin: 0;
@@ -39,74 +37,83 @@ img {
 }
 
 ul.icons {
-    cursor: default;
-    list-style: none;
-    padding-left: 0;
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
 }
 
 ul.icons li {
-    display: inline-block;
-    padding: 0 0.65em 0 0;
+  display: inline-block;
+  padding: 0 0.65em 0 0;
 }
 
 ul.icons li:last-child {
-    padding-right: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* Icon */
 
 .icon {
-    text-decoration: none;
-    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    border-bottom: none;
-    position: relative;
+  text-decoration: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-bottom: none;
+  position: relative;
 }
 
 .icon:before {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none !important;
 }
 
 .icon > .label {
-    display: none;
+  display: none;
 }
 
 
 .icon.alt {
-    display: inline-block;
-    border: solid 1px;
-    border-radius: 100%;
+  display: inline-block;
+  border: solid 1px;
+  border-radius: 100%;
 }
 
 .icon.alt:before {
-    display: block;
-    font-size: 1.25em;
-    width: 2em;
-    height: 2em;
-    text-align: center;
-    line-height: 2em;
+  display: block;
+  font-size: 1.25em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
 }
 
 .icon.alt {
-    border-color: #03a9f4;
-    color: #03a9f4;
+  border-color: #03a9f4;
+  color: #03a9f4;
 }
 
 .icon.alt:hover {
-    background-color: #03a9f4;
-    color: #fff;
+  background-color: #03a9f4;
+  color: #fff;
 }
 
 .icon.alt:active {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* profile picture */
+.profile-pic {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.profile-pic img {
+  border-radius: 100%;
+}
+
 
 .wrapper {
   overflow: hidden;
@@ -209,9 +216,15 @@ ul.icons li:last-child {
   color: #fff
 }
 
+.blue-bold b {
+    color: #03A9F4;
+
+}
+
 .article-content p {
   margin: 15px 0 25px;
 }
+
 
 .article-content a {
   text-decoration: none;
