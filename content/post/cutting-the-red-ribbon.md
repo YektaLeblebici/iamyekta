@@ -21,9 +21,13 @@ As for content, I don't really have a plan in mind right now. I think I'll post 
 
 Under the hood, it's a beautiful static website, generated with Hugo. I created a Hugo theme from HTML5UP's "Stellar" CSS template and made a few customizations on top of it. [^3] It's deployed with Docker Compose, and all of this process is wrapped in a tiny Makefile. To add a new post, all I have to do is to write my post in a Markdown file and run `make build`.
 
-By the way, if you like this website, and wish you had your own: all you have to do is to [fork  my repository](https://github.com/YektaLeblebici/iamyekta). Everything is configurable, so you can just remove my name from `config.yml` and remove my posts from the `content/` directory, then it's all yours!
+By the way, if you like this website, and wish you had your own: all you have to do is to [fork my repository](https://github.com/YektaLeblebici/iamyekta). Everything is configurable, so you can just remove my name from `config.yml` and remove my posts from the `content/` directory, then it's all yours!
 
-PS: This is my first time blogging in English. There will be some grammatical errors and questionable word choices. Please go easy on me. :smiley:
+## Update: 2019 facelift
+
+I made a facelift for my blog, a year after I published this post. Now it's a slightly customized version of Lithium theme, with a few minor changes here and there. 
+
+If you like it, you can still have it by [forking my repository](https://github.com/YektaLeblebici/iamyekta).
 
 
 [^1]: MeeGo Turkey was an initiative to help non-tech people and developers get on-board to Linux-based mobile devices.
