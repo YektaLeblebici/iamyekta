@@ -3,9 +3,12 @@
 <main class="content" role="main">
 
   <article class="article">
+
+    {{ if .Site.Params.logo.showOnIndexPage }}
       <div class="profile-pic">
           <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo.url }}">
     </div>
+    {{ end }}
 
     <h1 class="article-title title-greeting">Hi! I'm {{ .Site.Params.name }}.</h1>
     <div class="article-content custom-bold">

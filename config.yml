@@ -49,6 +49,7 @@ params:
   githubRepositoryOfWebsite: "https://github.com/YektaLeblebici/iamyekta"
 
   logo:
+    showOnIndexPage: False
     url:  "profile.jpg"
     width: 50
     height: 50
