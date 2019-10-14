@@ -5,15 +5,15 @@ theme: "iamyekta-lithium"
 description : "Yekta Leblebici, all about me."
 defaultLayout: "post"
 defaultContentLanguage: "en"
-enableRobotsTXT: true
-enableEmoji: true
+enableRobotsTXT: True
+enableEmoji: True
 paginate: 10
 paginatePath: "page"
 publishDir: "public"
-pygmentsCodeFencesGuessSyntax: true
+pygmentsCodeFencesGuessSyntax: True
 pygmentsStyle: "github"
 rssLimit: 15
-smartypants: false
+smartypants: False
 
 googleAnalytics: "UA-46870823-2" 
 disqusShortname: "iamyekta" 
@@ -34,7 +34,7 @@ menu:
       url: "mailto:hi@iamyekta.com"
 
 # Change it to false when we need more performance.
-disableFastRender: true
+disableFastRender: True
 
 # Parameters
 params:
