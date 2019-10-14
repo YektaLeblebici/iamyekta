@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
+  background-color: rgba(42,30,9);
 }
 
 h1,
@@ -24,7 +25,7 @@ h6 {
 
 h2 {
   font-family: 'Lato', sans-serif;
-  color: rgba(33,150,243,1);
+  color: rgba(236, 212, 172);
 }
 
 a {
@@ -90,12 +91,12 @@ ul.icons li:last-child {
 }
 
 .icon.alt {
-  border-color: #03a9f4;
-  color: #03a9f4;
+  border-color: #dfb670;
+  color: #dfb670;
 }
 
 .icon.alt:hover {
-  background-color: #03a9f4;
+  background-color: #dfb670;
   color: #fff;
 }
 
@@ -123,8 +124,8 @@ ul.icons li:last-child {
 .header {
   padding: 20px 0;
   position: relative;
-  background: #03A9F4;
-  border-bottom: 1px solid #03A9F4;
+  background: rgba(42,30,9);
+  border-bottom: 1px solid rgba(42,30,9);
 }
 
 .nav {
@@ -170,13 +171,13 @@ ul.icons li:last-child {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #dfb670;
   padding-top: 100%;
   padding-bottom: 100%;
 }
 
 .nav-links a:hover {
-  color: #ddd;
+  color: rgba(236, 212, 172);
 }
 
 .content {
@@ -185,23 +186,23 @@ ul.icons li:last-child {
   padding: 0 15px;
   font-size: 16px;
   line-height: 1.7;
-  color: #555;
+  color: #dfb670;
 }
 
 .article-title {
   font-size: 34px;
-  color: #222;
+  color: #dfb670;
   margin: 0;
   line-height: 1.3;
 }
 
 .title-greeting {
-  color: #03A9F4;
+  color: #dfb670;
   padding-bottom:14px;
 }
 
 .article-date {
-  color: #ccc;
+  color: rgba(236, 212, 172);
 }
 
 .article-duration {
@@ -212,12 +213,12 @@ ul.icons li:last-child {
   padding: 1px 5px;
   font-weight: bold;
   border-radius: 3px;
-  background: #03a9f4;
+  background: #dfb670;
   color: #fff
 }
 
-.blue-bold b {
-    color: #03A9F4;
+.custom-bold b {
+    color: rgba(236, 212, 172);
 
 }
 
@@ -229,15 +230,15 @@ ul.icons li:last-child {
 .article-content a {
   text-decoration: none;
   color: inherit;
-  border-bottom: 3px solid rgba(3,169,244,0.25);
-  box-shadow: inset 0 -4px 0 rgba(3,169,244,0.25);
+  border-bottom: 3px solid rgba(236, 212, 172, 0.25);
+  box-shadow: inset 0 -4px 0 rgba(236, 212, 172, 0.25);
   background: transparent;
   transition: background 150ms ease;
 }
 
 .article-content a:hover,
 .article-content a:focus {
-  background: rgba(3,169,244,0.25);
+  background: rgba(236, 212, 172, 0.25);
 
 }
 
@@ -247,13 +248,12 @@ ul.icons li:last-child {
   height: 1px;
   overflow: hidden;
   border: none;
-  background: #03a9f4;
+  background: rgba(236, 212, 172);
 }
 
 .article-content code {
     background-color: rgba(222, 222, 222, 0.25);
     border-radius: 8px;
-    border: solid 1px #dddddd;
     margin: 0 0.25em;
     padding: 0.1em 0.65em;
 }
@@ -289,7 +289,7 @@ ul.icons li:last-child {
 }
 
 .archive-item-date {
-  color: #ccc;
+  color: rgba(236, 212, 172);
   font-size: 14px;
   padding: 5px 0;
   margin-top: 5px;
@@ -302,13 +302,13 @@ ul.icons li:last-child {
   font-size: 21px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  color: #222;
+  color: #dfb670;
   padding: 5px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dfb670;
 }
 
 .archive-item-link:hover {
-  border-bottom-color: #222;
+  border-bottom-color: rgba(236, 212, 172);
 }
 
 .footer {
