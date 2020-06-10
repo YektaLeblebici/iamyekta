@@ -115,6 +115,11 @@ ul.icons li:last-child {
   border-radius: 100%;
 }
 
+/* short-bio style */
+.short-bio {
+  font-family: 'Lato', sans-serif;
+
+}
 
 .wrapper {
   overflow: hidden;
