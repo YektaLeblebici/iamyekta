@@ -218,8 +218,8 @@ ul.icons li:last-child {
   padding: 1px 5px;
   font-weight: bold;
   border-radius: 3px;
-  background: #dfb670;
-  color: #fff
+  background: rgb(88, 68, 40);
+  color: rgba(236, 212, 172);
 }
 
 .custom-bold b {
