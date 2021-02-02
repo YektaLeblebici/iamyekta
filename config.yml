@@ -28,8 +28,6 @@ menu:
       url: "/"
     - name: "Posts"
       url: "/post/"
-    - name: "Resume"
-      url: "/yekta_cv.pdf"
     - name: "Say Hi!"
       url: "mailto:hi@iamyekta.com"
 
