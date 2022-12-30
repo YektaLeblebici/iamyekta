@@ -1,3 +1,16 @@
+# Builder image
+FROM klakegg/hugo:0.107.0 AS builder
+
+RUN mkdir -p /src
+
+COPY ./ /src/
+
+WORKDIR /src
+
+# Generate public/ directory from Hugo templates
+RUN hugo --verbose
+
+# Nginx image
 FROM nginx:alpine
 LABEL maintainer "yekta@iamyekta.com"
 
@@ -5,7 +18,7 @@ LABEL maintainer "yekta@iamyekta.com"
 EXPOSE 80/tcp
 
 # Copy Hugo-generated static website dir.
-COPY public/ /usr/share/nginx/html/
+COPY --from=builder /src/public/ /usr/share/nginx/html
 
 # Copy custom Nginx configuration.
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
