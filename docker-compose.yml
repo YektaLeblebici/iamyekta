@@ -9,3 +9,9 @@ services:
     ports:
       - "80:80"
     restart: always
+   networks:
+     - web_network
+
+networks:
+  web_network:
+    name: web_network
