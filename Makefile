@@ -9,5 +9,4 @@ clean:
 	@echo ">> Removing container(s) and image(s)."
 	docker-compose down --rmi all
 
-
 .PHONY: build up clean
