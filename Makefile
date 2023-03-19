@@ -1,20 +1,13 @@
-build: clean clean-docker hugo-build docker-up
-	@echo ">> Built Hugo and started Docker container(s)."
+build: clean
+	docker-compose build
 
-hugo-build: clean
-	@echo ">> Building Hugo pages."
-	@hugo --verbose
-
-docker-up:
+up:
 	@echo ">> Starting up Docker container(s)."
-	@docker-compose up --build -d
+	docker-compose up --build -d
 
 clean:
-	@echo ">> Removing public directory."
-	@rm -rf public/
+	@echo ">> Removing container(s) and image(s)."
+	docker-compose down --rmi all
 
-clean-docker:
-	@echo ">> Removing container(s)."
-	@docker-compose down
 
-.PHONY: build hugo-build docker-up clean clean-docker
+.PHONY: build up clean
