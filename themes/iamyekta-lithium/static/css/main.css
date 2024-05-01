@@ -52,6 +52,10 @@ ul.icons li:last-child {
   padding-right: 0 !important;
 }
 
+.center {
+  text-align: center;
+}
+
 /* Icon */
 
 .icon {
