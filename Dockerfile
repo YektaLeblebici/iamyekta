@@ -1,5 +1,5 @@
 # Builder image
-FROM klakegg/hugo:0.107.0 AS builder
+FROM hugomods/hugo:0.125.4 AS builder
 
 RUN mkdir -p /src
 
