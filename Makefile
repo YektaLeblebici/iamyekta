@@ -1,4 +1,7 @@
-build: clean
+prepare:
+	exiftool -r -all= -orientation -overwrite_original ./static/assets/
+
+build: clean prepare
 	docker-compose build
 
 up:
