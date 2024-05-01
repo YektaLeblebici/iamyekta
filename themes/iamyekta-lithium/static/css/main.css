@@ -265,6 +265,7 @@ ul.icons li:last-child {
     border-radius: 8px;
     margin: 0 0.25em;
     padding: 0.1em 0.65em;
+    text-wrap: wrap;
 }
 
 .highlight {
