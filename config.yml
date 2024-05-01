@@ -49,9 +49,19 @@ menu:
 # Change it to false when we need more performance.
 disableFastRender: True
 
+module:
+  mounts:
+    source: "static"
+    target: "static"
+
+  assets:
+    source: "assets"
+    target: "static/assets"
+
 # Parameters
 params:
   name: "Yekta Leblebici"
+  shortName: "Yekta"
   shortBio: "I'm an infrastructure-focused software developer currently living in <b>Berlin</b>. With a passion for everything that happens on a computer screen, I've been hacking around Linux terminals from my early ages for the last 15 years. Nowadays I do <b>Linux</b>, <b>Cloud</b>, <b>Platform</b>, <b>Go</b> and <b>Web</b> stuff for work and leisure.
   
   <p>In my evenings, I enjoy reading books and scrolling through Hacker News, as well as playing various games, and watching sci-fi, fantasy and animated movies.</p>"
@@ -70,4 +80,3 @@ params:
 
   icon:
     url: "favicon-32x32.png"
-
