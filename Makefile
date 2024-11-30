@@ -1,10 +1,11 @@
 prepare:
-	exiftool -r -all= -orientation -overwrite_original ./static/assets/
+	exiftool -r -all= -tagsfromfile @ -icc_profile -overwrite_original  ./static/assets/
+
 
 build: clean prepare
 	docker-compose build
 
-up:
+up: prepare
 	@echo ">> Starting up Docker container(s)."
 	docker-compose up --build -d
 
