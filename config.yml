@@ -28,7 +28,7 @@ markup:
     lineNumbersInTable: false
     noClasses: true
     noHl: false
-    style: base16-snazzy
+    style: catppuccin-frappe
     tabWidth: 2
 
 disqusShortname: "iamyekta" 
