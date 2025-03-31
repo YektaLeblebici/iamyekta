@@ -3,9 +3,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-}
 
-body {
   font-family: 'Inter', sans-serif;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga' on;
@@ -55,6 +53,23 @@ ul.icons li:last-child {
 
 .center {
   text-align: center;
+}
+
+figure {
+  margin: 1em 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 0.7em;
+  margin-top: 0.2em;
 }
 
 /* Icon */
