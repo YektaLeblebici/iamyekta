@@ -31,8 +31,6 @@ markup:
     style: catppuccin-frappe
     tabWidth: 2
 
-disqusShortname: "iamyekta" 
-
 permalinks:
   post: /post/:year/:month/:title/
   page: /:title/
