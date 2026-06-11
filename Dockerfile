@@ -1,5 +1,5 @@
 # Builder image
-FROM hugomods/hugo:0.125.4 AS builder
+FROM hugomods/hugo:0.163.0 AS builder
 
 RUN mkdir -p /src
 
@@ -13,7 +13,7 @@ ARG HUGO_BASEURL=""
 RUN hugo --gc --minify ${HUGO_BASEURL:+--baseURL "$HUGO_BASEURL"}
 
 # Nginx image
-FROM nginx:1.27-alpine
+FROM nginx:1.31-alpine
 LABEL maintainer="yekta@iamyekta.com"
 
 # SSL terminated elsewhere.
