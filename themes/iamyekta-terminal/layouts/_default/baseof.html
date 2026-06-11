@@ -1,6 +1,6 @@
 {{- $isPost := and (eq .Section "post") .IsPage -}}
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.Language.Locale | default "en" }}">
   <head>
     {{ partial "head.html" . }}
   </head>

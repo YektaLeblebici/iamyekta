@@ -7,7 +7,7 @@
 {{- $content := printf "%s" .content -}}
 {{- $set := .set -}}
 {{- if $set -}}
-  {{- range site.Data.emoji -}}
+  {{- range hugo.Data.emoji -}}
     {{- $e := .e -}}
     {{- if strings.Contains $content $e -}}
       {{- $code := .c -}}

@@ -1,5 +1,5 @@
 baseURL: "https://iamyekta.com/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Yekta Leblebici"
 theme: "iamyekta-terminal"
 description : "Yekta Leblebici, all about me."
@@ -7,6 +7,8 @@ defaultLayout: "post"
 defaultContentLanguage: "en"
 enableRobotsTXT: True
 enableEmoji: True
+# Taxonomies are unused; don't generate empty /tags/ and /categories/.
+disableKinds: ["taxonomy", "term"]
 paginate: 10
 paginatePath: "page"
 publishDir: "public"
