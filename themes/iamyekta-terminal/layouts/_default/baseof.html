@@ -1,0 +1,20 @@
+{{- $isPost := and (eq .Section "post") .IsPage -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body{{ if $isPost }} class="is-post"{{ end }}>
+    {{ if $isPost }}<div class="reading-progress" aria-hidden="true"><span></span></div>{{ end }}
+    {{ partial "header.html" . }}
+    <main class="main" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ if $isPost }}
+    <button class="to-top" type="button" aria-label="Back to top" title="Back to top" hidden>{{ partial "icon.html" "top" }}</button>
+    {{ end }}
+    {{ partial "footer.html" . }}
+    {{ $js := resources.Get "js/enhance.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+  </body>
+</html>

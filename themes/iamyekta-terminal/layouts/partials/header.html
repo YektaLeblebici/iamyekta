@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="{{ .Site.BaseURL }}" aria-label="Home">
+      <img class="brand-avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.logo.url }}" width="{{ .Site.Params.logo.width }}" height="{{ .Site.Params.logo.height }}" alt="{{ .Site.Params.shortName }}">
+      <span class="brand-name">{{ .Site.Params.shortName | lower }}<b class="brand-cursor" aria-hidden="true"></b></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      {{ range .Site.Menus.main }}
+      <a class="nav-link{{ if $.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      <button type="button" class="theme-toggle" aria-label="Switch to dark theme" title="Toggle light / dark">
+        <span class="ico ico-moon" aria-hidden="true">{{ partial "icon.html" "moon" }}</span>
+        <span class="ico ico-sun" aria-hidden="true">{{ partial "icon.html" "sun" }}</span>
+      </button>
+    </nav>
+  </div>
+</header>

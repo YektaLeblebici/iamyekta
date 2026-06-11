@@ -1,0 +1,63 @@
+/* iamyekta-terminal palette — two modes, switched by the header toggle (NOT the OS).
+   Default = light (the terminal's clean look). [data-theme="dark"] = the Monokai
+   colourscheme. A tiny inline script in head.html sets data-theme before paint
+   (defaulting to light), so the system colour preference is intentionally ignored. */
+
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg:          #f7f9fb;
+  --bg-soft:     #eef2f7;
+  --surface:     #ffffff;
+  --surface-2:   #f1f5f9;
+  --bar:         #eaeff5;
+  --border:      #d7dee8;
+  --border-soft: rgba(15, 30, 55, 0.10);
+
+  --text:        #1f2733;
+  --text-soft:   #44505f;
+  --muted:       #6b7888;
+  --heading:     #0f141b;
+
+  --accent:      #0e9f6e;
+  --accent-soft: #0b8a5f;
+  --accent-2:    #7c5cf0;
+  --link:        #0e9f6e;
+
+  --tok-comment: #8794a6;
+  --tok-string:  #b7791f;
+  --tok-error:   #e02424;
+
+  --selection:   rgba(14, 159, 110, 0.18);
+  --shadow:      rgba(20, 40, 70, 0.14);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg:          #1f201a;
+  --bg-soft:     #26271f;
+  --surface:     #2b2c25;  /* window body (lighter than code #272822) */
+  --surface-2:   #383930;  /* inline code / hover                     */
+  --bar:         #313229;  /* window title bar                        */
+  --border:      #49483e;  /* Monokai gutter/selection grey           */
+  --border-soft: rgba(248, 248, 242, 0.12);
+
+  --text:        #f8f8f2;  /* Monokai foreground */
+  --text-soft:   #d3d3ca;
+  --muted:       #8f8f80;
+  --heading:     #fdfdf7;
+
+  --accent:      #a6e22e;  /* Monokai green  */
+  --accent-soft: #c2ee63;
+  --accent-2:    #f92672;  /* Monokai pink   */
+  --link:        #a6e22e;
+
+  --tok-comment: #75715e;  /* Monokai comment */
+  --tok-string:  #e6db74;  /* Monokai string  */
+  --tok-error:   #f92672;  /* Monokai pink    */
+
+  --selection:   rgba(166, 226, 46, 0.22);
+  --shadow:      rgba(0, 0, 0, 0.55);
+}

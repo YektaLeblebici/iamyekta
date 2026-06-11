@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="window">
+    <div class="window-bar">
+      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="window-title">404 — not found</span>
+    </div>
+    <div class="window-body">
+      <div class="error-head">
+        <h1 class="hero-title">Page not found</h1>
+        <img class="error-anim" src="{{ .Site.BaseURL }}shell-search.gif" width="80" height="50" alt="" aria-hidden="true" loading="lazy">
+      </div>
+      <div class="hero-bio">
+        <p>It seems like the link you have followed has been moved, deleted or never existed at all.</p>
+        <p>If you think that this is an error, please <a href="mailto:{{ .Site.Params.mailAddr }}">shoot me an email</a>. Thanks!</p>
+      </div>
+
+      {{ $recent := first 3 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
+      {{ with $recent }}
+      <p class="cmd"><span class="prompt">~$</span> ls -t posts/ <span class="cmd-pipe">|</span> head -3 <span class="cmd-comment"># my last 3 posts</span></p>
+      <ul class="post-list error-suggest">
+        {{ range . }}
+        {{ $href := .Permalink }}{{ $ext := false }}
+        {{ if .Params.customPermalink }}{{ $href = .Params.customPermalink }}{{ $ext = true }}{{ end }}
+        <li class="post-row">
+          <a class="post-row-link" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener"{{ end }}>
+            <span class="post-row-glyph" aria-hidden="true">{{ if $ext }}↗{{ else }}›{{ end }}</span>
+            <span class="post-row-title">{{ .Title }}</span>
+            <time class="post-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      <p class="cmd"><span class="prompt">~$</span> <span class="blink-cursor" aria-hidden="true"></span></p>
+    </div>
+  </div>
+</section>
+{{ end }}

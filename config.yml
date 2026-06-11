@@ -1,7 +1,7 @@
 baseURL: "https://iamyekta.com/"
 languageCode: "en-us"
 title: "Yekta Leblebici"
-theme: "iamyekta-lithium"
+theme: "iamyekta-terminal"
 description : "Yekta Leblebici, all about me."
 defaultLayout: "post"
 defaultContentLanguage: "en"
@@ -26,7 +26,7 @@ markup:
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: false
-    noClasses: true
+    noClasses: false
     noHl: false
     style: catppuccin-frappe
     tabWidth: 2
@@ -47,20 +47,20 @@ menu:
 # Change it to false when we need more performance.
 disableFastRender: True
 
-module:
-  mounts:
-    source: "static"
-    target: "static"
-
-  assets:
-    source: "assets"
-    target: "static/assets"
+# Image processing defaults for the responsive image pipeline.
+imaging:
+  quality: 82
+  resampleFilter: "Lanczos"
 
 # Parameters
 params:
   name: "Yekta Leblebici"
   shortName: "Yekta"
-  shortBio: "I'm an infrastructure-focused software developer currently living in <b>Berlin</b>. With a passion for everything that happens on a computer screen, I've been hacking around Linux terminals from my early ages for the last 15 years. Nowadays I do <b>Linux</b>, <b>Cloud</b>, <b>Platform</b>, <b>Go</b> and <b>Web</b> stuff for work and leisure.
+  # Post emojis are themed at build time and self-hosted (see partials/emojify.html).
+  # "twemoji" (vendored colour SVGs) | "" (system emojis). Emoji the set lacks
+  # fall back to the system emoji automatically.
+  emojiset: "twemoji"
+  shortBio: "I'm an infrastructure-focused software developer currently living in <b>Berlin</b>. With a passion for everything that happens on a computer screen, I've been hacking around Linux terminals from my early ages for the last 20 years. Nowadays I do <b>Linux</b>, <b>Cloud</b>, <b>Platform</b>, <b>Go</b> and <b>Web</b> stuff for work and leisure.
   
   <p>In my evenings, I enjoy reading books and scrolling through Hacker News, as well as playing various games, and watching sci-fi, fantasy and animated movies.</p>"
   githubLink: "https://github.com/YektaLeblebici"

@@ -1,0 +1,17 @@
+# Keep the image build context lean and reproducible.
+.git
+.github
+.gitignore
+.dockerignore
+.claude
+node_modules
+
+# Hugo output + cache are regenerated inside the builder.
+public/
+resources/
+
+# Tooling not needed to build the site.
+Makefile
+Dockerfile
+exiftool.Dockerfile
+docker-compose.yml

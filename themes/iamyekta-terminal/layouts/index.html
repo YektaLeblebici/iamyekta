@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="window">
+    <div class="window-bar">
+      <span class="dots" aria-hidden="true"><i class="dot-close" title="Shut down"></i><i></i><i></i></span>
+      <span class="window-title">~</span>
+    </div>
+    <div class="window-body">
+      <p class="cmd"><span class="prompt">~$</span> whoami</p>
+      <h1 class="hero-title">Hi! I'm {{ .Site.Params.shortName }}.<span class="hero-cursor" aria-hidden="true"></span></h1>
+      <div class="hero-bio">{{ .Site.Params.shortBio | safeHTML }}</div>
+
+      <p class="cmd"><span class="prompt">~$</span> ls socials/</p>
+      <ul class="socials">
+        <li><a href="{{ .Site.BaseURL }}post" class="social-link" aria-label="Blog" title="blog">{{ partial "icon.html" "blog" }}</a></li>
+        <li><a href="{{ .Site.Params.githubLink }}" class="social-link" rel="me noopener" aria-label="GitHub" title="github">{{ partial "icon.html" "github" }}</a></li>
+        <li><a href="{{ .Site.Params.linkedinLink }}" class="social-link" rel="me noopener" aria-label="LinkedIn" title="linkedin">{{ partial "icon.html" "linkedin" }}</a></li>
+        <li><a href="{{ .Site.Params.keybaseLink }}" class="social-link" rel="me noopener" aria-label="Keybase" title="keybase">{{ partial "icon.html" "keybase" }}</a></li>
+        <li><a href="mailto:{{ .Site.Params.mailAddr }}" class="social-link" aria-label="Email" title="email">{{ partial "icon.html" "mail" }}</a></li>
+      </ul>
+
+      {{ with index (where .Site.RegularPages "Type" "post").ByDate.Reverse 0 }}
+      {{ $ext := false }}{{ $href := .Permalink }}
+      {{ if .Params.customPermalink }}{{ $ext = true }}{{ $href = .Params.customPermalink }}{{ end }}
+      <p class="cmd latest-cmd"><span class="prompt">~$</span> ls -t posts/ <span class="cmd-pipe">|</span> head -1 <span class="cmd-comment"># Latest post</span></p>
+      <a class="latest-card" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener"{{ end }}>
+        <span class="latest-title">{{ .Title }}{{ if $ext }} <span class="ext-arrow" aria-hidden="true">↗</span>{{ end }}</span>
+        {{ if not $ext }}<span class="latest-meta">{{ .ReadingTime }} min</span>{{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,12 @@
+{{- /* Code blocks rendered as little terminal/editor windows. */ -}}
+<div class="code-block"{{ with .Type }} data-lang="{{ . }}"{{ end }}>
+  <div class="code-bar">
+    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    {{- with .Type }}<span class="code-lang">{{ . }}</span>{{ end -}}
+    <button class="code-copy" type="button" aria-label="Copy code to clipboard" title="Copy">
+      <span class="i-copy">{{ partial "icon.html" "copy" }}</span>
+      <span class="i-check">{{ partial "icon.html" "check" }}</span>
+    </button>
+  </div>
+  {{ (transform.HighlightCodeBlock .).Wrapped }}
+</div>

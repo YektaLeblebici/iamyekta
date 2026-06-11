@@ -1,10 +1,5 @@
-{{ $src := .Get "src" }}
-{{ $alt := .Get "alt" }}
-
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
 <div class="center">
-  <img
-    src="{{ $src }}"
-    alt="{{ $alt }}"
-    decoding="async"
-  />
+  {{ partial "responsive-img.html" (dict "src" $src "alt" $alt) }}
 </div>

@@ -1,0 +1,21 @@
+{{- /* Build-time emoji theming. Replaces unicode emoji in rendered content with a
+       vendored local Twemoji SVG under assets/emoji/twemoji/. The full set is
+       vendored, so there is no network fetch and no runtime JS; any emoji not in
+       the set falls back to the system emoji. Set via the `emojiset` param
+       ("twemoji" | "" to disable). Attribution: see README.
+       Input: dict "content" <rendered HTML> "set" <"twemoji"|"">. */ -}}
+{{- $content := printf "%s" .content -}}
+{{- $set := .set -}}
+{{- if $set -}}
+  {{- range site.Data.emoji -}}
+    {{- $e := .e -}}
+    {{- if strings.Contains $content $e -}}
+      {{- $code := .c -}}
+      {{- $name := .n -}}
+      {{- with resources.Get (printf "emoji/%s/%s.svg" $set $code) -}}
+        {{- $content = replace $content $e (printf `<img class="emoji emoji-%s" src="%s" alt="%s" draggable="false" loading="lazy" decoding="async">` $set .RelPermalink $name) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $content -}}

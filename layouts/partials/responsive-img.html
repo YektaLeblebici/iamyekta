@@ -1,0 +1,37 @@
+{{- /*
+  Responsive image partial.
+  Params: src (e.g. "/assets/foo.png"), alt, optional class.
+  Emits a WebP srcset across sensible widths (never upscaled past the source),
+  with intrinsic width/height to avoid layout shift, plus lazy/async loading.
+  Falls back to a plain <img> for remote/missing sources.
+*/ -}}
+{{- $src := .src | default "" -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $rel := strings.TrimPrefix "/" $src -}}
+{{- $img := resources.Get $rel -}}
+{{- if $img -}}
+  {{- $maxw := 1100 -}}
+  {{- $srcset := slice -}}
+  {{- range $w := (slice 480 768 1100 1600 2000) -}}
+    {{- if le $w $img.Width -}}
+      {{- $v := $img.Resize (printf "%dx webp" $w) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $w) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $srcset -}}
+    {{- $v := $img.Resize (printf "%dx webp" $img.Width) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $img.Width) -}}
+  {{- end -}}
+  {{- $fbw := cond (gt $img.Width $maxw) $maxw $img.Width -}}
+  {{- $fb := $img.Resize (printf "%dx webp" $fbw) -}}
+  <img
+    src="{{ $fb.RelPermalink }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="(max-width: 768px) 92vw, 700px"
+    width="{{ $img.Width }}" height="{{ $img.Height }}"
+    alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}
+    loading="lazy" decoding="async">
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

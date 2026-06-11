@@ -1,0 +1,5 @@
+{{- /* Headings get an id + a subtle anchor link revealed on hover. */ -}}
+<h{{ .Level }} id="{{ .Anchor }}" class="heading">
+  {{ .Text | safeHTML }}
+  <a class="heading-anchor" href="#{{ .Anchor }}" aria-label="Link to this section">#</a>
+</h{{ .Level }}>

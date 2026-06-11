@@ -19,17 +19,17 @@ Now it's been a year since getting my first programmable column-staggered split 
 
 It's normal if you don't know what those words mean. Let's parse their meanings together:
 
-#### Programmable
+### Programmable
 The keyboard has built-in memory where you can set what every key does, on 10 virtual layouts (called layers), stores macros, one key can have up to 5 functions, and so on. Lots of customization that is written to keyboard's memory and comes with you to any computer.
 
 This is much more advanced than what companies mean when they say "programmable". By being able to change how each key behaves and being able to make key combos and different layouts, you can practically make 10 keyboards and carry them around as if it's one. QWERTY to COLEMAK, English to German, a gaming keyboard that mirrors your keys and moves important ones under your thumb, a macro keyboard where a single button press does a lot, all and more is possible and you can switch between them on-the-fly.
 
 I'll talk more on this later on. Let's move on for now.
 
-#### Wireless
+### Wireless
 Self-explanatory. Cool thing about this one is that is supports both RF for low latency and Bluetooth up to 5 devices. I use RF to my gaming PC and Bluetooth to my Mac. Bluetooth is good for work, but I can easily tell the difference in latency compared to RF when I game. 
 
-#### Split
+### Split
 {{< centerimg
 src="/assets/ergonomy.webp"
 alt="Cartoon man sits by his desk ergonomically" >}}
@@ -44,19 +44,19 @@ You can finally wide open your chest, and look like the people in those pictures
 
 One other minor advantage is that since now you have a large empty space in the middle, you can put a trackpad, laptop, iPad, or a cat there. 🙂
 
-#### Column-staggered
+### Column-staggered
 On a normal keyboard keys are staggered, as in they are slightly to the left or right of each other, because of how typewriters used to work back then.
 
 A **column-staggered** keyboard has a key layout where keys are vertically staggered instead of horizontally. This makes finding the keys easier, makes [touch typing](https://en.wikipedia.org/wiki/Touch_typing) feel natural, reduces unnecessary finger movement, and takes into account that your fingers aren't of equal size, to improve comfort. The column that sits under the middle finger is the farthest away, and the keys under pinkies are the closest.
 
-#### Thumb cluster
+### Thumb cluster
 Instead of one key (spacebar) under your thumbs, now you have up to 16. The idea is that your thumbs much more capable and flexible to be wasted on a single key, and by having more keys under it you can reduce the stress on your other fingers flexing to reach far away keys.
 
 This is where you usually put your "special" keys like CTRL, ALT, ENTER and such, if you were surprised by the lack of those keys in the picture above.
 
 There is also a fun blog post over on Dygma's blog on [how they reached their current design.](https://dygma.com/blogs/product-development/how-we-developed-the-defys-16-thumbkeys) I've read for some people while this reduces strain on other fingers, it increases on the thumbs. For me, after a year that hasn't happened, and I find it more comfortable to have a thumb cluster. I use the top three keys + the long key the most, which makes 8 keys in total. Other 8 I've bound them to less used functions, such as layer switches, MENU key that I never press etc. (Crazy that we're still stuck with that key on most standard keyboards)
 
-#### Tenting
+### Tenting
 {{< centerimg
 src="/assets/gallery-defy-red.webp"
 alt="A tented Dygma Defy" >}}
@@ -65,7 +65,7 @@ This is the ability to hold the keyboard at an angle, instead of it facing strai
 
 Preferences on tenting vary a lot. Some swear by it and use their keyboards at very high angles, up to 60° is possible with a Defy, and others prefer more conservative angles. I found 10° the perfect angle for me, where I can reach the keys with more ease and my wrists have less pressure.
 
-#### A picture is worth a thousand words
+### A picture is worth a thousand words
 {{< centerimg
 src="/assets/mydefy.jpeg"
 alt="My Dygma Defy" >}}
@@ -199,7 +199,7 @@ While I use the word "programmable", Defy isn't as programmable as many DIY kits
 
 Upside is Defy has nicer UX, much easier to iterate on configuration through Bazecor UI, supports RF (ZMK doesn't) and has full control of the experience. The downside is you don't have that much control of the experience. I have to admit that I'd much be happier if they were to adopt ZMK and contribute their RF work upstream.
 
-# Switches
+## Switches
 {{< centerimg
 src="/assets/defy-switches-on-desk.jpeg"
 alt="Choc switches in three different varieties" >}}
@@ -216,7 +216,7 @@ As for Defy, the lower thumb keys (4 keys each side) have different, lower profi
 
 [^5]: Sorry!
 
-# Getting used to it -- or "my first week"
+## Getting used to it -- or "my first week"
 
 For context, I've moved from a standard mechanical Cherry MX Blue keyboard with Turkish Q layout to a split columnar Silent Pink keyboard with English US layout. So I basically changed where the keys are, how the keys are aligned, and sometimes what do they mean, all at once.
 
@@ -264,7 +264,7 @@ Still it's a significant improvement over the humble 60wpm~ I wrote at before, a
 In short, if you can afford to, I would recommend the cold-turkey approach as I did.
 
 
-# Is there a tl;dr for this? Should I buy one too?
+## Is there a tl;dr for this? Should I buy one too?
 
 I can't and won't ever answer the second one, because I'm not a tech YouTuber. 😄
 
@@ -276,7 +276,7 @@ I genuinely feel like this keyboard has made my day-to-day significantly more er
 
 I find it very much worth it to invest in what I see as an important tool and an interface to a big portion of my life. Yet your mileage may vary.
 
-# Bugs and downsides
+## Bugs and downsides
 
 I wrote so much on Defy as that's the keyboard I use and have experience with, though I wouldn't want this post to be some kind of blanket endorsement of the product.
 
@@ -297,7 +297,7 @@ In my opinion some strong contenders to Defy are:
   * Depending on how your project goes this can come significantly cheaper, or expensive at the end. It makes the best sense if you consider it as a fun project to do yourself and learn along the way. If what you want is just the keyboard, it's hard to justify the time and effort considering DIY ones aren't exactly cheap either.
 
 
-# The end
+## The end
 
 If you made it all the way to the end, thanks for reading my *book*^H^H^H^H blog post on ergonomic keyboards.[^6]
 

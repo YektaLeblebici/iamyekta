@@ -1,14 +1,21 @@
-version: "3"
 services:
   nginx:
     build:
       context: .
+      args:
+        # Empty in prod (config baseURL); make dev-up sets HUGO_BASEURL=/ so
+        # links/fonts are host-relative instead of pointing at the live site.
+        HUGO_BASEURL: "${HUGO_BASEURL:-}"
     image: yekta/iamyekta-nginx:latest
     hostname: "nginx"
     domainname: "iamyekta.com"
     ports:
-      - "80:80"
+      # Host port defaults to 80 (prod); WEB_PORT overrides it (e.g. make dev-up
+      # uses 8001 on a dev box that can't bind privileged :80).
+      - "${WEB_PORT:-80}:80"
     restart: always
+    security_opt:
+      - "no-new-privileges:true"
     networks:
       - web_network
 

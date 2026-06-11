@@ -1,0 +1,7 @@
+{{- /* Override of the built-in figure shortcode: responsive images + caption. */ -}}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+  {{ partial "responsive-img.html" (dict "src" (.Get "src") "alt" (.Get "alt")) }}
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<section class="post">
+  <div class="window">
+    <div class="window-bar">
+      <span class="dots window-controls">
+        <a class="dot dot-red" href="{{ .Site.BaseURL }}" title="Close" aria-label="Close — go to home"></a>
+        <a class="dot dot-yellow" href="{{ .Site.BaseURL }}" title="Minimize" aria-label="Minimize — go to home"></a>
+        <i aria-hidden="true"></i>
+      </span>
+      <span class="window-title">~/posts</span>
+    </div>
+    <div class="window-body">
+      <div class="listing">
+        <p class="cmd"><span class="prompt">~/posts$</span> ls -lt</p>
+
+        {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" }}
+        <h2 class="year"><span class="tok-comment">#</span> {{ .Key }}</h2>
+        <ul class="post-list">
+          {{ range .Pages }}
+          {{ $href := .Permalink }}{{ $ext := false }}
+          {{ if .Params.customPermalink }}{{ $href = .Params.customPermalink }}{{ $ext = true }}{{ end }}
+          <li class="post-row">
+            <a class="post-row-link" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener"{{ end }}>
+              <span class="post-row-glyph" aria-hidden="true">{{ if $ext }}↗{{ else }}›{{ end }}</span>
+              <span class="post-row-title">{{ .Title }}</span>
+              <time class="post-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

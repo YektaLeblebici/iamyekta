@@ -7,12 +7,14 @@ COPY ./ /src/
 
 WORKDIR /src
 
-# Generate public/ directory from Hugo templates
-RUN hugo --verbose
+# Generate public/ (minified, with resource GC). HUGO_BASEURL is empty in prod
+# (uses config baseURL); dev passes "/" for host-relative links — see docker-compose.yml.
+ARG HUGO_BASEURL=""
+RUN hugo --gc --minify ${HUGO_BASEURL:+--baseURL "$HUGO_BASEURL"}
 
 # Nginx image
-FROM nginx:alpine
-LABEL maintainer "yekta@iamyekta.com"
+FROM nginx:1.27-alpine
+LABEL maintainer="yekta@iamyekta.com"
 
 # SSL terminated elsewhere.
 EXPOSE 80/tcp

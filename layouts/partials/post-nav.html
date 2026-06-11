@@ -1,0 +1,31 @@
+{{- /* Previous/next post navigation, chronological, skipping external (customPermalink) posts. */ -}}
+{{- if eq .Section "post" -}}
+  {{- $posts := slice -}}
+  {{- range (where .Site.RegularPages "Section" "post").ByDate -}}
+    {{- if not .Params.customPermalink -}}{{- $posts = $posts | append . -}}{{- end -}}
+  {{- end -}}
+  {{- $cur := .RelPermalink -}}
+  {{- $prev := false -}}{{- $next := false -}}
+  {{- range $i, $p := $posts -}}
+    {{- if eq $p.RelPermalink $cur -}}
+      {{- if gt $i 0 -}}{{- $prev = index $posts (sub $i 1) -}}{{- end -}}
+      {{- if lt (add $i 1) (len $posts) -}}{{- $next = index $posts (add $i 1) -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if or $prev $next -}}
+  <nav class="post-nav" aria-label="Post navigation">
+    {{- with $prev }}
+    <a class="post-nav-item post-nav-prev" href="{{ .RelPermalink }}">
+      <span class="post-nav-dir">← Previous</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+    {{- with $next }}
+    <a class="post-nav-item post-nav-next" href="{{ .RelPermalink }}">
+      <span class="post-nav-dir">Next →</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+  </nav>
+  {{- end -}}
+{{- end -}}

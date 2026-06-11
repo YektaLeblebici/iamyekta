@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="footer-note">© {{ now.Year }} {{ .Site.Params.name }} — built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> and <span class="footer-heart" role="img" aria-label="love">{{ partial "icon.html" "heart" }}</span></p>
+    <ul class="footer-links">
+      <li><a href="{{ .Site.BaseURL }}post/index.xml" type="application/rss+xml" target="_blank" rel="noopener" aria-label="RSS">{{ partial "icon.html" "rss" }}<span>rss</span></a></li>
+      <li><a href="{{ .Site.Params.githubRepositoryOfWebsite }}" target="_blank" rel="noopener" aria-label="Source">{{ partial "icon.html" "github" }}<span>source</span></a></li>
+    </ul>
+  </div>
+</footer>

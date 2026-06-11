@@ -1,0 +1,9 @@
+name = "iamyekta-terminal"
+license = "MIT"
+licenselink = "https://github.com/YektaLeblebici/iamyekta/blob/master/LICENSE"
+description = "A modern, playful terminal/editor-inspired theme: monospace UI, prompt hero, window-chrome code blocks."
+homepage = "https://iamyekta.com/"
+min_version = "0.116.0"
+
+[author]
+  name = "Yekta Leblebici"
