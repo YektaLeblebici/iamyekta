@@ -7,10 +7,11 @@ COPY ./ /src/
 
 WORKDIR /src
 
-# Generate public/ (minified, with resource GC). HUGO_BASEURL is empty in prod
-# (uses config baseURL); dev passes "/" for host-relative links — see docker-compose.yml.
-ARG HUGO_BASEURL=""
-RUN hugo --gc --minify ${HUGO_BASEURL:+--baseURL "$HUGO_BASEURL"}
+# Generate public/ (minified, with resource GC). Empty BASEURL = prod (config
+# baseURL); dev passes "/" for host-relative links. Named BASEURL, not HUGO_BASEURL:
+# an empty HUGO_* build arg leaks into the env and nulls Hugo's config baseURL.
+ARG BASEURL=""
+RUN hugo --gc --minify ${BASEURL:+--baseURL "$BASEURL"}
 
 # Nginx image
 FROM nginx:1.31-alpine

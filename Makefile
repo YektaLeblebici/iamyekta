@@ -13,12 +13,14 @@ prepare:
 	$(ENGINE) run --rm -v "$(CURDIR):/src$(MOUNT_OPT)" -w /src $(EXIFTOOL_IMG) \
 		-r -all= -tagsfromfile @ -icc_profile -overwrite_original ./assets/assets/
 
+# Prod forces HUGO_BASEURL empty (= config baseURL), overriding any HUGO_BASEURL=/
+# in a server .env that would otherwise ship a relative, feed-breaking build.
 build: clean prepare
-	$(COMPOSE) build
+	HUGO_BASEURL= $(COMPOSE) build
 
 up: prepare
 	@echo ">> Building & serving nginx (host port WEB_PORT, default 80). Stop with: make down"
-	$(COMPOSE) up --build -d
+	HUGO_BASEURL= $(COMPOSE) up --build -d
 
 # Like up, but forces the dev profile inline: unprivileged port + host-relative links.
 dev-up: prepare

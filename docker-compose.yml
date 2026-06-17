@@ -5,7 +5,8 @@ services:
       args:
         # Empty in prod (config baseURL); make dev-up sets HUGO_BASEURL=/ so
         # links/fonts are host-relative instead of pointing at the live site.
-        HUGO_BASEURL: "${HUGO_BASEURL:-}"
+        # Arg is BASEURL, not HUGO_BASEURL (an empty HUGO_* arg nulls config baseURL).
+        BASEURL: "${HUGO_BASEURL:-}"
     image: yekta/iamyekta-nginx:latest
     hostname: "nginx"
     domainname: "iamyekta.com"
