@@ -2,26 +2,18 @@ baseURL: "https://iamyekta.com/"
 locale: "en-us"
 title: "Yekta Leblebici"
 theme: "iamyekta-terminal"
-description : "Yekta Leblebici, all about me."
-defaultLayout: "post"
 defaultContentLanguage: "en"
 enableRobotsTXT: True
 enableEmoji: True
 # Taxonomies are unused; don't generate empty /tags/ and /categories/.
 disableKinds: ["taxonomy", "term"]
-paginate: 10
-paginatePath: "page"
 publishDir: "public"
-pygmentsCodeFencesGuessSyntax: True
-pygmentsStyle: "github"
-rssLimit: 15
-smartypants: False
 
 markup:
   highlight:
     anchorLineNos: false
     codeFences: true
-    guessSyntax: false
+    guessSyntax: true
     hl_Lines: ""
     hl_inline: false
     lineAnchors: ""
@@ -30,12 +22,17 @@ markup:
     lineNumbersInTable: false
     noClasses: false
     noHl: false
-    style: catppuccin-frappe
     tabWidth: 2
 
 permalinks:
   post: /post/:year/:month/:title/
   page: /:title/
+
+# Limit the RSS feed to the 15 most recent items (replaces the deprecated
+# top-level rssLimit, which Hugo no longer honours).
+services:
+  rss:
+    limit: 15
 
 menu: 
   main:
@@ -58,6 +55,8 @@ imaging:
 params:
   name: "Yekta Leblebici"
   shortName: "Yekta"
+  # Site-wide meta description (used on the home page; see partials/head.html).
+  description: "Hi! I'm Yekta. I'm an infrastructure-focused software developer currently living in Berlin."
   # Post emojis are themed at build time and self-hosted (see partials/emojify.html).
   # "twemoji" (vendored colour SVGs) | "" (system emojis). Emoji the set lacks
   # fall back to the system emoji automatically.
