@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="brand" href="{{ .Site.BaseURL }}" aria-label="Home">
-      <img class="brand-avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.logo.url }}" width="{{ .Site.Params.logo.width }}" height="{{ .Site.Params.logo.height }}" alt="{{ .Site.Params.shortName }}">
+    <a class="brand" href="{{ "" | absURL }}" aria-label="Home">
+      <img class="brand-avatar" src="{{ .Site.Params.logo.url | absURL }}" width="{{ .Site.Params.logo.width }}" height="{{ .Site.Params.logo.height }}" alt="{{ .Site.Params.shortName }}">
       <span class="brand-name">{{ .Site.Params.shortName | lower }}<b class="brand-cursor" aria-hidden="true"></b></span>
     </a>
     <nav class="nav" aria-label="Primary">

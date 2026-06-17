@@ -12,7 +12,7 @@
 
       <p class="cmd"><span class="prompt">~$</span> ls socials/</p>
       <ul class="socials">
-        <li><a href="{{ .Site.BaseURL }}post" class="social-link" aria-label="Blog" title="blog">{{ partial "icon.html" "blog" }}</a></li>
+        <li><a href="{{ "post/" | absURL }}" class="social-link" aria-label="Blog" title="blog">{{ partial "icon.html" "blog" }}</a></li>
         <li><a href="{{ .Site.Params.githubLink }}" class="social-link" rel="me noopener" aria-label="GitHub" title="github">{{ partial "icon.html" "github" }}</a></li>
         <li><a href="{{ .Site.Params.linkedinLink }}" class="social-link" rel="me noopener" aria-label="LinkedIn" title="linkedin">{{ partial "icon.html" "linkedin" }}</a></li>
         <li><a href="{{ .Site.Params.keybaseLink }}" class="social-link" rel="me noopener" aria-label="Keybase" title="keybase">{{ partial "icon.html" "keybase" }}</a></li>

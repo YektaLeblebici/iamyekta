@@ -3,8 +3,8 @@
   <div class="window">
     <div class="window-bar">
       <span class="dots window-controls">
-        <a class="dot dot-red" href="{{ .Site.BaseURL }}" title="Close" aria-label="Close — go to home"></a>
-        <a class="dot dot-yellow" href="{{ .Site.BaseURL }}post/" title="Minimize" aria-label="Minimize — go to posts"></a>
+        <a class="dot dot-red" href="{{ "" | absURL }}" title="Close" aria-label="Close — go to home"></a>
+        <a class="dot dot-yellow" href="{{ "post/" | absURL }}" title="Minimize" aria-label="Minimize — go to posts"></a>
         <i aria-hidden="true"></i>
       </span>
       <span class="window-title">{{ with .File }}~/posts/{{ .ContentBaseName }}.md{{ else }}~/posts{{ end }}</span>
