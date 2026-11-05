@@ -105,9 +105,6 @@
     });
   }
 
-  // Only a real hover / focus / tap turns hi@ into hi+YYYYMMDD@ (UTC), so mail
-  // to a tagged address came from a visitor, while harvesters scraping the
-  // static HTML get the plain fallback. Not proof: the pattern is guessable.
   function initMailTag() {
     var addr = script && script.getAttribute('data-mail');
     if (!addr) return;
