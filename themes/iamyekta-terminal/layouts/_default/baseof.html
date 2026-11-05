@@ -15,6 +15,6 @@
     {{ end }}
     {{ partial "footer.html" . }}
     {{ $js := resources.Get "js/enhance.js" | minify | fingerprint }}
-    <script src="{{ $js.RelPermalink }}" defer></script>
+    <script src="{{ $js.RelPermalink }}" data-mail="{{ .Site.Params.mailAddr }}" defer></script>
   </body>
 </html>

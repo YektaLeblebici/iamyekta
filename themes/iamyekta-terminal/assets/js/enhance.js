@@ -1,7 +1,9 @@
 // Progressive enhancements: copy-to-clipboard, reading progress, back-to-top,
-// and a tiny shutdown easter egg. Everything works without it.
+// mail link tagging, and a tiny shutdown easter egg. Everything works without it.
 (function () {
   'use strict';
+
+  var script = document.currentScript;
 
   function initCopyButtons() {
     document.querySelectorAll('.code-copy').forEach(function (btn) {
@@ -103,11 +105,30 @@
     });
   }
 
+  // Only a real hover / focus / tap turns hi@ into hi+YYYYMMDD@ (UTC), so mail
+  // to a tagged address came from a visitor, while harvesters scraping the
+  // static HTML get the plain fallback. Not proof: the pattern is guessable.
+  function initMailTag() {
+    var addr = script && script.getAttribute('data-mail');
+    if (!addr) return;
+    var at = addr.indexOf('@');
+    document.querySelectorAll('a[href="mailto:' + addr + '"]').forEach(function (a) {
+      function tag() {
+        var day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+        a.href = 'mailto:' + addr.slice(0, at) + '+' + day + addr.slice(at);
+      }
+      ['pointerenter', 'focus', 'click'].forEach(function (type) {
+        a.addEventListener(type, tag);
+      });
+    });
+  }
+
   function init() {
     initCopyButtons();
     initScrollExtras();
     initShutdown();
     initThemeToggle();
+    initMailTag();
   }
 
   if (document.readyState !== 'loading') {
