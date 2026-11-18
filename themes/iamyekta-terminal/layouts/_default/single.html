@@ -21,6 +21,13 @@
         {{ end }}
       </header>
 
+      {{ with .Params.notice }}
+      <aside class="post-notice" role="note">
+        <span class="post-notice-label">// republished</span>
+        <p>{{ . | markdownify }}</p>
+      </aside>
+      {{ end }}
+
       {{ if and (eq .Section "post") (gt (len .TableOfContents) 200) (ge .ReadingTime 4) }}
       <details class="toc" open>
         <summary>contents</summary>
